@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77171C563C8A007580FB /* AppDelegate.swift */; };
+		AD9E771A1C563C8A007580FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77191C563C8A007580FB /* ViewController.swift */; };
+		AD9E771D1C563C8A007580FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E771B1C563C8A007580FB /* Main.storyboard */; };
+		AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9E771E1C563C8A007580FB /* Assets.xcassets */; };
+		AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */; };
+		AD9E772D1C563C8A007580FB /* foodrain_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E772C1C563C8A007580FB /* foodrain_iosTests.swift */; };
+		AD9E77381C563C8B007580FB /* foodrain_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD9E77291C563C8A007580FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9E770C1C563C8A007580FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD9E77131C563C8A007580FB;
+			remoteInfo = foodrain_ios;
+		};
+		AD9E77341C563C8A007580FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9E770C1C563C8A007580FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD9E77131C563C8A007580FB;
+			remoteInfo = foodrain_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AD9E77141C563C8A007580FB /* foodrain_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodrain_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9E77171C563C8A007580FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AD9E77191C563C8A007580FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD9E771C1C563C8A007580FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD9E771E1C563C8A007580FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD9E77211C563C8A007580FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD9E77231C563C8A007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9E77281C563C8A007580FB /* foodrain_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodrain_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9E772C1C563C8A007580FB /* foodrain_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodrain_iosTests.swift; sourceTree = "<group>"; };
+		AD9E772E1C563C8A007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9E77331C563C8A007580FB /* foodrain_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodrain_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodrain_iosUITests.swift; sourceTree = "<group>"; };
+		AD9E77391C563C8B007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD9E77111C563C8A007580FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E77251C563C8A007580FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E77301C563C8A007580FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD9E770B1C563C8A007580FB = {
+			isa = PBXGroup;
+			children = (
+				AD9E77161C563C8A007580FB /* foodrain_ios */,
+				AD9E772B1C563C8A007580FB /* foodrain_iosTests */,
+				AD9E77361C563C8A007580FB /* foodrain_iosUITests */,
+				AD9E77151C563C8A007580FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD9E77151C563C8A007580FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E77141C563C8A007580FB /* foodrain_ios.app */,
+				AD9E77281C563C8A007580FB /* foodrain_iosTests.xctest */,
+				AD9E77331C563C8A007580FB /* foodrain_iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD9E77161C563C8A007580FB /* foodrain_ios */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E77171C563C8A007580FB /* AppDelegate.swift */,
+				AD9E77191C563C8A007580FB /* ViewController.swift */,
+				AD9E771B1C563C8A007580FB /* Main.storyboard */,
+				AD9E771E1C563C8A007580FB /* Assets.xcassets */,
+				AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */,
+				AD9E77231C563C8A007580FB /* Info.plist */,
+			);
+			path = foodrain_ios;
+			sourceTree = "<group>";
+		};
+		AD9E772B1C563C8A007580FB /* foodrain_iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E772C1C563C8A007580FB /* foodrain_iosTests.swift */,
+				AD9E772E1C563C8A007580FB /* Info.plist */,
+			);
+			path = foodrain_iosTests;
+			sourceTree = "<group>";
+		};
+		AD9E77361C563C8A007580FB /* foodrain_iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */,
+				AD9E77391C563C8B007580FB /* Info.plist */,
+			);
+			path = foodrain_iosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD9E77131C563C8A007580FB /* foodrain_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9E773C1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_ios" */;
+			buildPhases = (
+				AD9E77101C563C8A007580FB /* Sources */,
+				AD9E77111C563C8A007580FB /* Frameworks */,
+				AD9E77121C563C8A007580FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = foodrain_ios;
+			productName = foodrain_ios;
+			productReference = AD9E77141C563C8A007580FB /* foodrain_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AD9E77271C563C8A007580FB /* foodrain_iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9E773F1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosTests" */;
+			buildPhases = (
+				AD9E77241C563C8A007580FB /* Sources */,
+				AD9E77251C563C8A007580FB /* Frameworks */,
+				AD9E77261C563C8A007580FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD9E772A1C563C8A007580FB /* PBXTargetDependency */,
+			);
+			name = foodrain_iosTests;
+			productName = foodrain_iosTests;
+			productReference = AD9E77281C563C8A007580FB /* foodrain_iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AD9E77321C563C8A007580FB /* foodrain_iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9E77421C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosUITests" */;
+			buildPhases = (
+				AD9E772F1C563C8A007580FB /* Sources */,
+				AD9E77301C563C8A007580FB /* Frameworks */,
+				AD9E77311C563C8A007580FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AD9E77351C563C8A007580FB /* PBXTargetDependency */,
+			);
+			name = foodrain_iosUITests;
+			productName = foodrain_iosUITests;
+			productReference = AD9E77331C563C8A007580FB /* foodrain_iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD9E770C1C563C8A007580FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "송태양";
+				TargetAttributes = {
+					AD9E77131C563C8A007580FB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5CTG9FBNU3;
+					};
+					AD9E77271C563C8A007580FB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5CTG9FBNU3;
+						TestTargetID = AD9E77131C563C8A007580FB;
+					};
+					AD9E77321C563C8A007580FB = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5CTG9FBNU3;
+						TestTargetID = AD9E77131C563C8A007580FB;
+					};
+				};
+			};
+			buildConfigurationList = AD9E770F1C563C8A007580FB /* Build configuration list for PBXProject "foodrain_ios" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AD9E770B1C563C8A007580FB;
+			productRefGroup = AD9E77151C563C8A007580FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD9E77131C563C8A007580FB /* foodrain_ios */,
+				AD9E77271C563C8A007580FB /* foodrain_iosTests */,
+				AD9E77321C563C8A007580FB /* foodrain_iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AD9E77121C563C8A007580FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */,
+				AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */,
+				AD9E771D1C563C8A007580FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E77261C563C8A007580FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E77311C563C8A007580FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD9E77101C563C8A007580FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9E771A1C563C8A007580FB /* ViewController.swift in Sources */,
+				AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E77241C563C8A007580FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9E772D1C563C8A007580FB /* foodrain_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD9E772F1C563C8A007580FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD9E77381C563C8B007580FB /* foodrain_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AD9E772A1C563C8A007580FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD9E77131C563C8A007580FB /* foodrain_ios */;
+			targetProxy = AD9E77291C563C8A007580FB /* PBXContainerItemProxy */;
+		};
+		AD9E77351C563C8A007580FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD9E77131C563C8A007580FB /* foodrain_ios */;
+			targetProxy = AD9E77341C563C8A007580FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AD9E771B1C563C8A007580FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD9E771C1C563C8A007580FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD9E77211C563C8A007580FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AD9E773A1C563C8B007580FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AD9E773B1C563C8B007580FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD9E773D1C563C8B007580FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = foodrain_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD9E773E1C563C8B007580FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = foodrain_ios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD9E77401C563C8B007580FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = foodrain_iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodrain_ios.app/foodrain_ios";
+			};
+			name = Debug;
+		};
+		AD9E77411C563C8B007580FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = foodrain_iosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodrain_ios.app/foodrain_ios";
+			};
+			name = Release;
+		};
+		AD9E77431C563C8B007580FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = foodrain_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = foodrain_ios;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		AD9E77441C563C8B007580FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = foodrain_iosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.baemin.foodrain-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = foodrain_ios;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD9E770F1C563C8A007580FB /* Build configuration list for PBXProject "foodrain_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9E773A1C563C8B007580FB /* Debug */,
+				AD9E773B1C563C8B007580FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD9E773C1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9E773D1C563C8B007580FB /* Debug */,
+				AD9E773E1C563C8B007580FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD9E773F1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9E77401C563C8B007580FB /* Debug */,
+				AD9E77411C563C8B007580FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AD9E77421C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD9E77431C563C8B007580FB /* Debug */,
+				AD9E77441C563C8B007580FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD9E770C1C563C8A007580FB /* Project object */;
+}
