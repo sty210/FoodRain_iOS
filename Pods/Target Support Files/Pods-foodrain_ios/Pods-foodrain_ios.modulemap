@@ -1,0 +1,6 @@
+framework module Pods_foodrain_ios {
+  umbrella header "Pods-foodrain_ios-umbrella.h"
+
+  export *
+  module * { export * }
+}

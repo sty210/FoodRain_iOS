@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3385130E25DCB05AE43937C /* Pods_foodrain_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08ACF3A30F8C341457AECF /* Pods_foodrain_ios.framework */; };
 		AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77171C563C8A007580FB /* AppDelegate.swift */; };
-		AD9E771A1C563C8A007580FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77191C563C8A007580FB /* ViewController.swift */; };
-		AD9E771D1C563C8A007580FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E771B1C563C8A007580FB /* Main.storyboard */; };
 		AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9E771E1C563C8A007580FB /* Assets.xcassets */; };
 		AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */; };
 		AD9E772D1C563C8A007580FB /* foodrain_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E772C1C563C8A007580FB /* foodrain_iosTests.swift */; };
 		AD9E77381C563C8B007580FB /* foodrain_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */; };
+		AD9E774A1C563D12007580FB /* home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E77491C563D12007580FB /* home.storyboard */; };
+		AD9E774C1C563DCF007580FB /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E774B1C563DCF007580FB /* HomeVC.swift */; };
+		AD9E774E1C563E4A007580FB /* BookmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E774D1C563E4A007580FB /* BookmarkVC.swift */; };
+		ADC5DB4B1C5651840048714E /* HomeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DB4A1C5651840048714E /* HomeCategoryCell.swift */; };
+		ADC5DB4D1C565E880048714E /* HomeRegionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5DB4C1C565E880048714E /* HomeRegionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23F157FF9FC69404B7DB5189 /* Pods-foodrain_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodrain_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodrain_ios/Pods-foodrain_ios.release.xcconfig"; sourceTree = "<group>"; };
 		AD9E77141C563C8A007580FB /* foodrain_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodrain_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9E77171C563C8A007580FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD9E77191C563C8A007580FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD9E771C1C563C8A007580FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD9E771E1C563C8A007580FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD9E77211C563C8A007580FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD9E77231C563C8A007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		AD9E77331C563C8A007580FB /* foodrain_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = foodrain_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodrain_iosUITests.swift; sourceTree = "<group>"; };
 		AD9E77391C563C8B007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9E77491C563D12007580FB /* home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
+		AD9E774B1C563DCF007580FB /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		AD9E774D1C563E4A007580FB /* BookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkVC.swift; sourceTree = "<group>"; };
+		ADC5DB4A1C5651840048714E /* HomeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoryCell.swift; sourceTree = "<group>"; };
+		ADC5DB4C1C565E880048714E /* HomeRegionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRegionReusableView.swift; sourceTree = "<group>"; };
+		EC08ACF3A30F8C341457AECF /* Pods_foodrain_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodrain_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E4B855FC425FDC5D253678 /* Pods-foodrain_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodrain_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodrain_ios/Pods-foodrain_ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3385130E25DCB05AE43937C /* Pods_foodrain_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0647EC46D3DC893D213A47FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6E4B855FC425FDC5D253678 /* Pods-foodrain_ios.debug.xcconfig */,
+				23F157FF9FC69404B7DB5189 /* Pods-foodrain_ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7A5252FA40B0483CFB162DE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC08ACF3A30F8C341457AECF /* Pods_foodrain_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD9E770B1C563C8A007580FB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				AD9E772B1C563C8A007580FB /* foodrain_iosTests */,
 				AD9E77361C563C8A007580FB /* foodrain_iosUITests */,
 				AD9E77151C563C8A007580FB /* Products */,
+				0647EC46D3DC893D213A47FD /* Pods */,
+				7A5252FA40B0483CFB162DE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +127,11 @@
 		AD9E77161C563C8A007580FB /* foodrain_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AD9E77481C563D07007580FB /* setting */,
+				AD9E77471C563CF9007580FB /* bookmark */,
+				AD9E77461C563CBB007580FB /* store */,
+				AD9E77451C563CA0007580FB /* home */,
 				AD9E77171C563C8A007580FB /* AppDelegate.swift */,
-				AD9E77191C563C8A007580FB /* ViewController.swift */,
-				AD9E771B1C563C8A007580FB /* Main.storyboard */,
 				AD9E771E1C563C8A007580FB /* Assets.xcassets */,
 				AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */,
 				AD9E77231C563C8A007580FB /* Info.plist */,
@@ -125,6 +157,39 @@
 			path = foodrain_iosUITests;
 			sourceTree = "<group>";
 		};
+		AD9E77451C563CA0007580FB /* home */ = {
+			isa = PBXGroup;
+			children = (
+				AD9E77491C563D12007580FB /* home.storyboard */,
+				AD9E774B1C563DCF007580FB /* HomeVC.swift */,
+				AD9E774D1C563E4A007580FB /* BookmarkVC.swift */,
+				ADC5DB4A1C5651840048714E /* HomeCategoryCell.swift */,
+				ADC5DB4C1C565E880048714E /* HomeRegionReusableView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		AD9E77461C563CBB007580FB /* store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		AD9E77471C563CF9007580FB /* bookmark */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = bookmark;
+			sourceTree = "<group>";
+		};
+		AD9E77481C563D07007580FB /* setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +197,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9E773C1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_ios" */;
 			buildPhases = (
+				D8A64C046D8574DB7527A57A /* Check Pods Manifest.lock */,
 				AD9E77101C563C8A007580FB /* Sources */,
 				AD9E77111C563C8A007580FB /* Frameworks */,
 				AD9E77121C563C8A007580FB /* Resources */,
+				C55B018E0DF171DB1C809AB5 /* Embed Pods Frameworks */,
+				A34EE3F32AD0080C66FCC7C7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,7 +302,7 @@
 			files = (
 				AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */,
 				AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */,
-				AD9E771D1C563C8A007580FB /* Main.storyboard in Resources */,
+				AD9E774A1C563D12007580FB /* home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +322,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A34EE3F32AD0080C66FCC7C7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodrain_ios/Pods-foodrain_ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C55B018E0DF171DB1C809AB5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodrain_ios/Pods-foodrain_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8A64C046D8574DB7527A57A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD9E77101C563C8A007580FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD9E771A1C563C8A007580FB /* ViewController.swift in Sources */,
+				ADC5DB4B1C5651840048714E /* HomeCategoryCell.swift in Sources */,
 				AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */,
+				ADC5DB4D1C565E880048714E /* HomeRegionReusableView.swift in Sources */,
+				AD9E774C1C563DCF007580FB /* HomeVC.swift in Sources */,
+				AD9E774E1C563E4A007580FB /* BookmarkVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +415,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD9E771B1C563C8A007580FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD9E771C1C563C8A007580FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -398,6 +509,7 @@
 		};
 		AD9E773D1C563C8B007580FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E4B855FC425FDC5D253678 /* Pods-foodrain_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = foodrain_ios/Info.plist;
@@ -409,6 +521,7 @@
 		};
 		AD9E773E1C563C8B007580FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23F157FF9FC69404B7DB5189 /* Pods-foodrain_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = foodrain_ios/Info.plist;
@@ -485,6 +598,7 @@
 				AD9E773E1C563C8B007580FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9E773F1C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +607,7 @@
 				AD9E77411C563C8B007580FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9E77421C563C8B007580FB /* Build configuration list for PBXNativeTarget "foodrain_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +616,7 @@
 				AD9E77441C563C8B007580FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
