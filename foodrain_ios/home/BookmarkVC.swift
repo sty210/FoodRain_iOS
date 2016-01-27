@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BookmarkVC: UIViewController {
+class BookmarkVC: SunViewController {
     override func viewDidLoad() {
         print("bookmark")
     }
