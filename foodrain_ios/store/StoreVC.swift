@@ -15,8 +15,6 @@ class StoreVC: SunViewController {
     }
     
     @IBAction func backToHome(sender: AnyObject) {
-//        let HomeViewController = (UIStoryboard (name: "home", bundle: nil).instantiateViewControllerWithIdentifier("HomeVC")) as! HomeVC
-//        self.navigationController?.popToViewController(HomeViewController, animated: true)
         self.navigationController?.popViewControllerAnimated(true)
     }
     

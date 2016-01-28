@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A3385130E25DCB05AE43937C /* Pods_foodrain_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08ACF3A30F8C341457AECF /* Pods_foodrain_ios.framework */; };
+		AD31E4F21C58BEDF006FB277 /* SetRegionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31E4F11C58BEDF006FB277 /* SetRegionVC.swift */; };
+		AD31E4F41C58C4E8006FB277 /* store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31E4F31C58C4E8006FB277 /* store.storyboard */; };
+		AD31E4F61C58C593006FB277 /* bookmark.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31E4F51C58C593006FB277 /* bookmark.storyboard */; };
+		AD31E4F81C58C5A0006FB277 /* setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD31E4F71C58C5A0006FB277 /* setting.storyboard */; };
+		AD31E4FC1C58EEBD006FB277 /* HomeCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31E4FB1C58EEBD006FB277 /* HomeCategoryModel.swift */; };
+		AD31E4FE1C58FF05006FB277 /* SetRegionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31E4FD1C58FF05006FB277 /* SetRegionModel.swift */; };
+		AD31E5021C5905FB006FB277 /* SetRegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31E5011C5905FB006FB277 /* SetRegionCell.swift */; };
 		AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E77171C563C8A007580FB /* AppDelegate.swift */; };
 		AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD9E771E1C563C8A007580FB /* Assets.xcassets */; };
 		AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9E77201C563C8A007580FB /* LaunchScreen.storyboard */; };
@@ -41,6 +48,13 @@
 
 /* Begin PBXFileReference section */
 		23F157FF9FC69404B7DB5189 /* Pods-foodrain_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodrain_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodrain_ios/Pods-foodrain_ios.release.xcconfig"; sourceTree = "<group>"; };
+		AD31E4F11C58BEDF006FB277 /* SetRegionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetRegionVC.swift; path = ../store/SetRegionVC.swift; sourceTree = "<group>"; };
+		AD31E4F31C58C4E8006FB277 /* store.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = store.storyboard; sourceTree = "<group>"; };
+		AD31E4F51C58C593006FB277 /* bookmark.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = bookmark.storyboard; sourceTree = "<group>"; };
+		AD31E4F71C58C5A0006FB277 /* setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setting.storyboard; sourceTree = "<group>"; };
+		AD31E4FB1C58EEBD006FB277 /* HomeCategoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoryModel.swift; sourceTree = "<group>"; };
+		AD31E4FD1C58FF05006FB277 /* SetRegionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRegionModel.swift; sourceTree = "<group>"; };
+		AD31E5011C5905FB006FB277 /* SetRegionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRegionCell.swift; sourceTree = "<group>"; };
 		AD9E77141C563C8A007580FB /* foodrain_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodrain_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9E77171C563C8A007580FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD9E771E1C563C8A007580FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +67,7 @@
 		AD9E77371C563C8B007580FB /* foodrain_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodrain_iosUITests.swift; sourceTree = "<group>"; };
 		AD9E77391C563C8B007580FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9E774B1C563DCF007580FB /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		AD9E774D1C563E4A007580FB /* BookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkVC.swift; sourceTree = "<group>"; };
+		AD9E774D1C563E4A007580FB /* BookmarkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkVC.swift; path = ../home/BookmarkVC.swift; sourceTree = "<group>"; };
 		ADC5DB4A1C5651840048714E /* HomeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoryCell.swift; sourceTree = "<group>"; };
 		ADC5DB4C1C565E880048714E /* HomeRegionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRegionReusableView.swift; sourceTree = "<group>"; };
 		ADC5DB561C5728320048714E /* home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = home.storyboard; sourceTree = "<group>"; };
@@ -106,6 +120,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD31E4FA1C58EE82006FB277 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AD31E4FB1C58EEBD006FB277 /* HomeCategoryModel.swift */,
+				AD31E4FD1C58FF05006FB277 /* SetRegionModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		AD9E770B1C563C8A007580FB = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +154,7 @@
 		AD9E77161C563C8A007580FB /* foodrain_ios */ = {
 			isa = PBXGroup;
 			children = (
+				AD31E4FA1C58EE82006FB277 /* model */,
 				AD9E77481C563D07007580FB /* setting */,
 				AD9E77471C563CF9007580FB /* bookmark */,
 				AD9E77461C563CBB007580FB /* store */,
@@ -164,12 +188,13 @@
 		AD9E77451C563CA0007580FB /* home */ = {
 			isa = PBXGroup;
 			children = (
+				AD31E4F11C58BEDF006FB277 /* SetRegionVC.swift */,
 				ADC5DB561C5728320048714E /* home.storyboard */,
 				AD9E774B1C563DCF007580FB /* HomeVC.swift */,
 				ADC5DB4A1C5651840048714E /* HomeCategoryCell.swift */,
 				ADC5DB4C1C565E880048714E /* HomeRegionReusableView.swift */,
-				AD9E774D1C563E4A007580FB /* BookmarkVC.swift */,
 				ADC5DB601C585EA60048714E /* SunViewController.swift */,
+				AD31E5011C5905FB006FB277 /* SetRegionCell.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -177,6 +202,7 @@
 		AD9E77461C563CBB007580FB /* store */ = {
 			isa = PBXGroup;
 			children = (
+				AD31E4F31C58C4E8006FB277 /* store.storyboard */,
 				ADC5DB621C588D2B0048714E /* StoreVC.swift */,
 			);
 			path = store;
@@ -185,6 +211,8 @@
 		AD9E77471C563CF9007580FB /* bookmark */ = {
 			isa = PBXGroup;
 			children = (
+				AD9E774D1C563E4A007580FB /* BookmarkVC.swift */,
+				AD31E4F51C58C593006FB277 /* bookmark.storyboard */,
 			);
 			path = bookmark;
 			sourceTree = "<group>";
@@ -192,6 +220,7 @@
 		AD9E77481C563D07007580FB /* setting */ = {
 			isa = PBXGroup;
 			children = (
+				AD31E4F71C58C5A0006FB277 /* setting.storyboard */,
 			);
 			path = setting;
 			sourceTree = "<group>";
@@ -306,9 +335,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD31E4F41C58C4E8006FB277 /* store.storyboard in Resources */,
+				AD31E4F61C58C593006FB277 /* bookmark.storyboard in Resources */,
 				AD9E77221C563C8A007580FB /* LaunchScreen.storyboard in Resources */,
 				ADC5DB571C5728320048714E /* home.storyboard in Resources */,
 				AD9E771F1C563C8A007580FB /* Assets.xcassets in Resources */,
+				AD31E4F81C58C5A0006FB277 /* setting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,11 +413,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD31E4FE1C58FF05006FB277 /* SetRegionModel.swift in Sources */,
 				ADC5DB4B1C5651840048714E /* HomeCategoryCell.swift in Sources */,
+				AD31E4FC1C58EEBD006FB277 /* HomeCategoryModel.swift in Sources */,
 				ADC5DB631C588D2B0048714E /* StoreVC.swift in Sources */,
 				ADC5DB611C585EA60048714E /* SunViewController.swift in Sources */,
 				AD9E77181C563C8A007580FB /* AppDelegate.swift in Sources */,
 				ADC5DB4D1C565E880048714E /* HomeRegionReusableView.swift in Sources */,
+				AD31E4F21C58BEDF006FB277 /* SetRegionVC.swift in Sources */,
+				AD31E5021C5905FB006FB277 /* SetRegionCell.swift in Sources */,
 				AD9E774C1C563DCF007580FB /* HomeVC.swift in Sources */,
 				AD9E774E1C563E4A007580FB /* BookmarkVC.swift in Sources */,
 			);

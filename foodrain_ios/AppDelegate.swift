@@ -40,6 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
+        
+        let preferences = NSUserDefaults.standardUserDefaults()
+        // 0은 지역코드 중에 없다. 1부터 시작. 따라서 0은 지역설정 했던 정보를 해제하는 부분임.
+        preferences.setInteger(0, forKey: "RegionCode")
+        preferences.setValue(nil, forKey: "RegionName")
+        
+        //  Save to disk
+        preferences.synchronize()
     }
 
 
