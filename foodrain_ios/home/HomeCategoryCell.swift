@@ -11,5 +11,7 @@ import UIKit
 
 class HomeCategoryCell: UICollectionViewCell {
     
+    var id: Int!
+    @IBOutlet weak var categoryName: UILabel!
     @IBOutlet weak var categoryImage: UIImageView!
 }
