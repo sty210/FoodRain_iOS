@@ -10,7 +10,5 @@ import Foundation
 import UIKit
 
 class BookmarkVC: SunViewController {
-    override func viewDidLoad() {
-        print("bookmark")
-    }
+
 }

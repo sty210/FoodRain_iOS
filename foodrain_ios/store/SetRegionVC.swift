@@ -11,7 +11,6 @@ import UIKit
 import Alamofire
 
 class SetRegionVC: SunViewController , UITableViewDelegate, UITableViewDataSource , UISearchBarDelegate{
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var RegionArray = [SetRegionModel]()
@@ -28,7 +27,7 @@ class SetRegionVC: SunViewController , UITableViewDelegate, UITableViewDataSourc
         RegionArray.removeAll()
         let param = ["name": searchBar.text!]
         
-        Alamofire.request(.GET, "http://10.10.0.54:9090/api/regioncodes.json", parameters: param)
+        Alamofire.request(.GET, "http://192.168.0.2:3000/api/regioncodes.json", parameters: param)
             .responseJSON { response in
                 if let JSON = response.result.value {
                     if let results = JSON as? NSArray {

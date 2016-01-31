@@ -11,21 +11,24 @@ import UIKit
 import Alamofire
 
 class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataSource{
-    
+
     @IBOutlet weak var regionNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var HomeCategoryArray = [HomeCategoryModel]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.HomeCategoryArray.removeAll()
         
+        let inputURL: String! = "http://192.168.0.2:3000/api/categorycodes.json"
+        print(inputURL)
+        
         //API호출
-        Alamofire.request(.GET, "http://10.10.0.54:9090/api/categorycodes.json", parameters: nil)
+        Alamofire.request(.GET, inputURL, parameters: nil)
             .responseJSON {
                 response in
+                print("요청 들어감!")
                 
                 print(response.request)  // original URL request
                 print(response.response) // URL response
@@ -50,7 +53,9 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
                         self.collectionView.reloadData()
                     }
                 }
+        print("요청 끝남!")
         }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -58,11 +63,9 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
         
         let preferences = NSUserDefaults.standardUserDefaults()
 
-        
         if preferences.objectForKey("RegionName") != nil {
             regionNameLabel.text = preferences.objectForKey("RegionName") as? String
         }
-        
     }
     
     
@@ -76,7 +79,7 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
         cell.id = HomeCategoryArray[indexPath.row].id
         cell.categoryName.text = HomeCategoryArray[indexPath.row].name
         cell.categoryImage.image = UIImage(named: "ready")
-        cell.categoryImage.highlightedImage = UIImage(named: "testimg1")
+        //cell.categoryImage.highlightedImage = UIImage(named: "testimg1")
         
         /*
         
@@ -99,10 +102,17 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let StoreListsController = (UIStoryboard (name: "store", bundle: nil).instantiateViewControllerWithIdentifier("StoreVC")) as! StoreVC
+        StoreListsController.categoryId = HomeCategoryArray[indexPath.row].id
+        StoreListsController.receivedCategoryName = HomeCategoryArray[indexPath.row].name!
+        for i in HomeCategoryArray {
+            print(i)
+            StoreListsController.storeListArray.append(Store())
+        }
+
         self.navigationController?.pushViewController(StoreListsController, animated: true)
     }
     @IBAction func setRegion(sender: AnyObject) {
-        let SetRegionController = (UIStoryboard (name: "home", bundle: nil).instantiateViewControllerWithIdentifier("SetRegionVC")) as! SetRegionVC
+        let SetRegionController = (UIStoryboard (name: "regionsetting", bundle: nil).instantiateViewControllerWithIdentifier("SetRegionVC")) as! SetRegionVC
         self.navigationController?.pushViewController(SetRegionController, animated: true)
     }
 }
