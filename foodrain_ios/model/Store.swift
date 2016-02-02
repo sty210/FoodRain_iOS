@@ -10,10 +10,12 @@ import Foundation
 
 class Store: NSObject {
     var page: Int?
+    var records: Int?
     var row = [StoreListModel]()
     
     override init() {
         self.page = 1
+        self.records = 0
         //self.row = 
     }
 }

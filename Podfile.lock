@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (3.1.5)
+  - PagingMenuController (0.7.9)
 
 DEPENDENCIES:
   - Alamofire (~> 3.1.5)
+  - PagingMenuController
 
 SPEC CHECKSUMS:
   Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
+  PagingMenuController: 619ab0852545e0619fcfa8672f10f39f8d10de1f
 
-PODFILE CHECKSUM: 455785ab954e9156c917095ad52b9f0a82ba1b28
+PODFILE CHECKSUM: 9df676a1e278a96d1275319986eb4898e5c691f9
 
 COCOAPODS: 1.0.0.beta.2

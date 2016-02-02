@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="단골매장" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPu-wC-nbg">
-                                <rect key="frame" x="158" y="323.5" width="59" height="20.5"/>
+                                <rect key="frame" x="158" y="323" width="59" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhJ-04-iLS">
-                                <rect key="frame" x="160" y="323.5" width="54.5" height="20.5"/>
+                                <rect key="frame" x="160" y="323" width="54.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -243,36 +243,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yB4-2b-eI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750.5" y="-411.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3Fd-rs-21i">
-            <objects>
-                <viewController storyboardIdentifier="test" id="Bxd-BK-9EM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JIL-Ti-q3X"/>
-                        <viewControllerLayoutGuide type="bottom" id="ROd-xQ-TO0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iWZ-e7-TgH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xa6-oA-nvL">
-                                <rect key="frame" x="0.0" y="206" width="375" height="344"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ROd-xQ-TO0" firstAttribute="top" secondItem="Xa6-oA-nvL" secondAttribute="bottom" constant="117" id="5gK-hA-I6E"/>
-                            <constraint firstItem="Xa6-oA-nvL" firstAttribute="top" secondItem="JIL-Ti-q3X" secondAttribute="bottom" constant="186" id="D07-ry-A5T"/>
-                            <constraint firstAttribute="trailing" secondItem="Xa6-oA-nvL" secondAttribute="trailing" id="Y1u-35-xae"/>
-                            <constraint firstItem="Xa6-oA-nvL" firstAttribute="leading" secondItem="iWZ-e7-TgH" secondAttribute="leading" id="vOH-Cs-ns4"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bM9-pW-EUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-582.5" y="-1224.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jIo-dR-Lck">
