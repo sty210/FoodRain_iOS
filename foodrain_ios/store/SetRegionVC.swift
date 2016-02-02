@@ -9,11 +9,25 @@
 import Foundation
 import UIKit
 import Alamofire
+import CoreLocation
 
-class SetRegionVC: SunViewController , UITableViewDelegate, UITableViewDataSource , UISearchBarDelegate{
+class SetRegionVC: SunViewController , UITableViewDelegate, UITableViewDataSource , UISearchBarDelegate, CLLocationManagerDelegate{
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var RegionArray = [SetRegionModel]()
+    var locationManager: CLLocationManager = CLLocationManager()
+    
+    @IBAction func setLocationByCurrentXY(sender: AnyObject) {
+        
+        
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
+    
+    
+    
+    
     
     
     override func viewDidLoad() {

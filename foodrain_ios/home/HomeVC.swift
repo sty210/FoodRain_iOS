@@ -9,43 +9,79 @@
 import Foundation
 import UIKit
 import Alamofire
+import CoreLocation
 
-class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
 
     @IBOutlet weak var regionNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var HomeCategoryArray = [HomeCategoryModel]()
+    var locationManager: CLLocationManager!
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations[0].coordinate.longitude)
+        print(locations[0].coordinate.latitude)
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print(error)
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus){
+        print("1")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     
+        
+        /*
+        //사용자에게 권한 요청
+        locationManager.requestWhenInUseAuthorization()
+        //정확도 설정 : 10미터 이내의 정확도(더 정확한 설정도 가능하지만 배터리소모량 증가함)
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        //위치변화 감지 반경설정(설정안함)
+        locationManager.distanceFilter = kCLDistanceFilterNone
+        //위치 업데이트 시작
+        locationManager.startUpdatingLocation()
+        //경위도를 얻어옴
+        let location: CLLocation = CLLocation()
+        let currentLatitude: CLLocationDistance = location.coordinate.latitude
+        let currentLongitude: CLLocationDistance = location.coordinate.longitude
+        
+        print("경위도 테스트 시작!")
+        print(currentLatitude)
+        print(currentLongitude)
+        print("경위도 테스트 끝!")
+        */
+        
+        
+        
+        
         self.HomeCategoryArray.removeAll()
         
         let inputURL: String! = "http://192.168.0.2:3000/api/categorycodes.json"
-        print(inputURL)
         
         //API호출
         Alamofire.request(.GET, inputURL, parameters: nil)
             .responseJSON {
                 response in
-                print("요청 들어감!")
-                
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.result)   // result of response serialization
                 
                 //API호출 결과
                 if let JSON = response.result.value {
                     if let results = JSON as? NSArray {
-                        print(results)
                             for rs in results {
                                 if let dict1 = rs as? NSDictionary {
                                     let CategoryModel = HomeCategoryModel()
                                     CategoryModel.id = dict1["id"] as? Int
                                     CategoryModel.name = dict1["name"] as? String
-                                    
-                                    print(CategoryModel.id)
-                                    print(CategoryModel.name)
                                     
                                     self.HomeCategoryArray.append(CategoryModel)
                                 }
@@ -104,8 +140,7 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
         let StoreListsController = (UIStoryboard (name: "store", bundle: nil).instantiateViewControllerWithIdentifier("StoreVC")) as! StoreVC
         StoreListsController.categoryId = HomeCategoryArray[indexPath.row].id
         StoreListsController.receivedCategoryName = HomeCategoryArray[indexPath.row].name!
-        for i in HomeCategoryArray {
-            print(i)
+        for _ in HomeCategoryArray {
             StoreListsController.storeListArray.append(Store())
         }
 

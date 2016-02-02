@@ -4,4 +4,6 @@ use_frameworks!
 
 target "foodrain_ios" do
     pod 'Alamofire', '~> 3.1.5'
+    pod "PagingMenuController"
+
 end

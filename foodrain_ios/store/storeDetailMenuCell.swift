@@ -12,5 +12,4 @@ import UIKit
 class storeDetailMenuCell: UICollectionViewCell {
     var id: Int!
     @IBOutlet weak var menuImageView: UIImageView!
-    
 }

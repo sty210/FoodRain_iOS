@@ -12,7 +12,7 @@ import Alamofire
 
 class StoreDetailVC: SunViewController ,UITabBarDelegate {
     @IBOutlet weak var storeTitle: UILabel!
-    @IBOutlet weak var storeDetailScrollView: UIScrollView!
+    @IBOutlet weak var storeDetailContentsView: UIView!
     
     var receivedId: Int?
     var receivedTitle: String?
@@ -107,20 +107,26 @@ class StoreDetailVC: SunViewController ,UITabBarDelegate {
     func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
       
         switch item.tag {
-        case 1:
-                self.storeDetailScrollView.insertSubview(self.menuVC!.view, belowSubview: self.tabBar)
-                
-                break
-        case 2:
-                self.storeDetailScrollView.insertSubview(self.infoVC!.view, belowSubview: self.tabBar)
-                self.infoVC?.inputData()
-                break
-        case 3:
-                self.storeDetailScrollView.insertSubview(self.reviewVC!.view, belowSubview: self.tabBar)
-                break
-        default:
-                break
             
+        case 1:
+            self.menuVC!.view.frame = CGRectMake(0, 0, self.storeDetailContentsView.frame.size.width, self.storeDetailContentsView.frame.size.height);
+            self.storeDetailContentsView.insertSubview(self.menuVC!.view, belowSubview: self.tabBar)
+            break
+            
+        case 2:
+                //self.infoVC!.view.frame.height = self.storeDetailContentsView.frame.height
+            self.infoVC!.view.frame = CGRectMake(0, 0, self.storeDetailContentsView.frame.size.width, self.storeDetailContentsView.frame.size.height);
+            self.storeDetailContentsView.insertSubview(self.infoVC!.view, belowSubview: self.tabBar)
+            self.infoVC?.inputData()
+            break
+            
+        case 3:
+            self.reviewVC!.view.frame = CGRectMake(0, 0, self.storeDetailContentsView.frame.size.width, self.storeDetailContentsView.frame.size.height);
+            self.storeDetailContentsView.insertSubview(self.reviewVC!.view, belowSubview: self.tabBar)
+            break
+            
+        default:
+            break
         }
     
     }
