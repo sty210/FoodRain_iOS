@@ -132,12 +132,19 @@ class StoreVC: SunViewController, UITableViewDelegate, UITableViewDataSource, UI
     func showStoresByCategory(){
         currentCategoryIndex = categoryId!-1
         
+        let preferences = NSUserDefaults.standardUserDefaults()
+        print(String(preferences.objectForKey("myLongitude")!))
+        print(String(String(preferences.objectForKey("myLatitude")!)))
+        
         if isAlreadyDataLoaded[currentCategoryIndex!] == false {
-            Alamofire.request(.GET, "http://192.168.0.2:3000/api/stores.json", parameters: ["category": categoryId!, "page": self.storeListArray[currentCategoryIndex!].page!])
+            self.startIndicator()
+
+            Alamofire.request(.GET, "http://10.10.0.58:9090/api/stores.json", parameters: ["category": categoryId!, "page": self.storeListArray[currentCategoryIndex!].page!, "longitude": String(preferences.objectForKey("myLongitude")!), "latitude": String(preferences.objectForKey("myLatitude")!)])
             .responseJSON { response in
+                
                 if let JSON = response.result.value {
                     if let JSON_ = JSON as? NSDictionary {
-                        print("!!!!!!!!!!!!!!!!!!!!!!!!!!")
+                        print("호출 되었음!!!!!!")
                         if let records = JSON_["records"] as? Int {
                             self.storeListArray[self.currentCategoryIndex!].records = records
                         }
@@ -151,17 +158,11 @@ class StoreVC: SunViewController, UITableViewDelegate, UITableViewDataSource, UI
                                     store.id = dict["id"] as? Int
                                     store.name = dict["name"] as? String
                                     store.address = dict["address"] as? String
-                                    //store.status = dict["status"] as? Int
-                                    //store.tag = dict["tag"] as? String
-                                    store.review_cnt = dict["review_cnt"] as? Int
-                                    store.grade_avg = dict["grade_avg"] as? Float
-                                    //store.main_image = dict["main_image"] as? String
+                                    store.review_cnt = dict["review_count"] as? Int
+                                    store.grade_avg = dict["grade_average"] as? Float
+                                    //store.main_image = dict["images"] as? String
                                     
-                                    
-                                    
-                                    //self.storeListArray.append(store)
-                                    //let test = self.storeListArray[self.currentCategoryIndex!]
-                                    //test.page = test.page! + 1
+                                
                                     categoryTable.row.append(store)
                                 }
                             }
@@ -171,6 +172,7 @@ class StoreVC: SunViewController, UITableViewDelegate, UITableViewDataSource, UI
                 }
     
                 self.mainTableView.reloadData()
+                self.stopIndicatior()
 
             }
             self.isAlreadyDataLoaded[self.currentCategoryIndex!] = true
@@ -219,6 +221,7 @@ class StoreVC: SunViewController, UITableViewDelegate, UITableViewDataSource, UI
         
         selectedStoreDetail.receivedId = storeListArray[currentCategoryIndex!].row[indexPath.row].id
         selectedStoreDetail.receivedTitle = storeListArray[currentCategoryIndex!].row[indexPath.row].name
+        selectedStoreDetail.receivedRating = storeListArray[currentCategoryIndex!].row[indexPath.row].grade_avg
         
         
         self.navigationController?.pushViewController(selectedStoreDetail, animated: true)
@@ -229,19 +232,63 @@ class StoreVC: SunViewController, UITableViewDelegate, UITableViewDataSource, UI
         if self.storeListArray[currentCategoryIndex!].records > 0 {
             if self.storeListArray[currentCategoryIndex!].row.count-1 == ((tableView.indexPathsForVisibleRows?.last)! as NSIndexPath).row {
                 
-                startIndicator()
+                //startIndicator()
                 isAlreadyDataLoaded[currentCategoryIndex!] = false
                 showStoresByCategory()
                 isAlreadyDataLoaded[currentCategoryIndex!] = true
-                stopIndicatior()
+                //stopIndicatior()
                 
             }
         }
     }
-
     
+    func enabledTrueAllBtn(){
+        self.chickenButton.enabled = true
+        self.pizzaButton.enabled = true
+        self.chinessButton.enabled = true
+        self.pigFootButton.enabled = true
+        self.KoreanButton.enabled = true
+        self.nightFoodButton.enabled = true
+        self.soupButton.enabled = true
+        self.japaneseButton.enabled = true
+        self.foodPackButton.enabled = true
+        self.fastFoodButton.enabled = true
+        self.etcButton.enabled = true
+    }
+    
+    func enabledFalseAllBtn(){
+        self.chickenButton.enabled = false
+        self.pizzaButton.enabled = false
+        self.chinessButton.enabled = false
+        self.pigFootButton.enabled = false
+        self.KoreanButton.enabled = false
+        self.nightFoodButton.enabled = false
+        self.soupButton.enabled = false
+        self.japaneseButton.enabled = false
+        self.foodPackButton.enabled = false
+        self.fastFoodButton.enabled = false
+        self.etcButton.enabled = false
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        enabledFalseAllBtn()
+    }
+    func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        enabledTrueAllBtn()
+    }
+
+    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
+        // button enable false
+        print("scrollViewWillBeginDecelerating")
+        enabledFalseAllBtn()
+    }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        
+        // button enable true
+        print("scrollViewDidEndDecelerating")
+        enabledTrueAllBtn()
+        
         if scrollView.isKindOfClass(UITableView) {
             
         } else {

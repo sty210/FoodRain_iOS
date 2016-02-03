@@ -13,19 +13,26 @@ import Alamofire
 class DetailReviewVC: SunViewController, UITableViewDelegate, UITableViewDataSource{
     
     var receivedId: Int?
+    var reviewCount: Int?
     var reviewListArray: ReviewArrayModel!
     var isAlreadyDataLoaded: Bool = false
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var writeReviewButton: UIButton!
+    @IBOutlet weak var mIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView.rowHeight = UITableViewAutomaticDimension
         
+        let title = String(reviewCount!+1)+"번째 리뷰의 주인공이 되어보세요!"
+        writeReviewButton.setTitle(title, forState: UIControlState.Normal)
         reviewListArray = ReviewArrayModel()
         
         
-        let requestURL = "http://192.168.0.2:3000/api/reviews.json"
+        let requestURL = "http://10.10.0.58:9090/api/reviews.json"
        
         if isAlreadyDataLoaded == false {
+            mIndicator.hidden = false
         Alamofire.request(.GET, requestURL, parameters: ["store_id": self.receivedId!, "page": self.reviewListArray.page!])
             .responseJSON {
                 response in
@@ -46,13 +53,15 @@ class DetailReviewVC: SunViewController, UITableViewDelegate, UITableViewDataSou
                                     
                                     let review = ReviewModel()
                                     review.id = dict["id"] as? Int
-                                    review.store_id = dict["store_id"] as? Int
+                                    //review.store_id = dict["store_id"] as? Int
                                     
                                     
                                     if let user = dict["user"] as? NSDictionary {
-                                            review.user_id = user["user_id"] as? Int
+                                            //review.user_id = user["user_id"] as? Int
                                             review.nickname = user["nickname"] as? String
-                                            review.user_image = user["main_image"] as? String
+                                        if let usr = user["image"] as? NSDictionary{
+                                            review.user_image = usr["url"] as? String
+                                        }
                                     }
                                     
                                     
@@ -68,6 +77,7 @@ class DetailReviewVC: SunViewController, UITableViewDelegate, UITableViewDataSou
                         }
                     }
                 }
+                self.mIndicator.hidden = true
                 self.reviewListArray.page = self.reviewListArray.page! + 1
                 self.tableView.reloadData()
             }
@@ -84,15 +94,15 @@ class DetailReviewVC: SunViewController, UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCellWithIdentifier("storeDetailReviewCell", forIndexPath: indexPath) as! storeDetailReviewCell
         
         cell.id = reviewListArray.row[indexPath.row].id
-        cell.user_id = reviewListArray.row[indexPath.row].user_id
-        cell.store_id = reviewListArray.row[indexPath.row].store_id
+        //cell.user_id = reviewListArray.row[indexPath.row].user_id
+        //cell.store_id = reviewListArray.row[indexPath.row].store_id
         cell.user_image = reviewListArray.row[indexPath.row].user_image
         cell.created_at.text = "작성시간 : "+reviewListArray.row[indexPath.row].created_at!
         cell.nickname.text = "닉네임 : "+reviewListArray.row[indexPath.row].nickname!
         cell.grade.text = "평점 : "+String(reviewListArray.row[indexPath.row].grade!)+"/5.0"
         cell.detail.text = "내용 : "+reviewListArray.row[indexPath.row].detail!
         cell.userProfileImageView.image = UIImage(named: "profileimageexample")
-
+        
         /*
         let imagePath = reviewListArray[indexPath.row].main_image!;
         
@@ -104,8 +114,9 @@ class DetailReviewVC: SunViewController, UITableViewDelegate, UITableViewDataSou
         }
         */
         
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        //cell.frame = CGRectMake(0, 0, cell.frame.size.width, cell.frame.size.height);
+        tableView.rowHeight = UITableViewAutomaticDimension
+        //cell.frame = CGRectMake(0, 0, cell.frame.size.width, cell.superview.);
+        tableView.estimatedRowHeight = cell.frame.size.height
         return cell
     }
     

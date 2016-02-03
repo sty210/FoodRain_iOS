@@ -22,6 +22,6 @@ class StoreListModel: NSObject {
     var review_cnt: Int?
     var grade_avg: Float?
     var menus = [ImageModel]()
-    var main_image = [ImageModel]()
+    var images = [ImageModel]()
     
 }

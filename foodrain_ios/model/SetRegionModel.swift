@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class SetRegionModel: NSObject {
-    var id: Int?
-    var name: String?
+    var address: String?
+    var longitude: Float?
+    var latitude: Float?
 }
