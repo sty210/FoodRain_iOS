@@ -43,8 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let preferences = NSUserDefaults.standardUserDefaults()
         // 0은 지역코드 중에 없다. 1부터 시작. 따라서 0은 지역설정 했던 정보를 해제하는 부분임.
-        preferences.setInteger(0, forKey: "RegionCode")
-        preferences.setValue(nil, forKey: "RegionName")
+        preferences.setFloat(0, forKey: "myLongitude")
+        preferences.setFloat(0, forKey: "myLatitude")
+        preferences.setValue(nil, forKey: "myAddress")
         
         //  Save to disk
         preferences.synchronize()

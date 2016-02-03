@@ -73,6 +73,10 @@
                                     <string>Title</string>
                                 </scopeButtonTitles>
                             </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lki-G1-VPc">
+                                <rect key="frame" x="169" y="114" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="setRegionTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mbb-7c-upa">
                                 <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,12 +126,15 @@
                             <constraint firstItem="Mbb-7c-upa" firstAttribute="top" secondItem="ab8-0I-PiN" secondAttribute="bottom" id="b7e-nb-pdB"/>
                             <constraint firstItem="ab8-0I-PiN" firstAttribute="width" secondItem="gv0-md-Azw" secondAttribute="width" id="bKz-aG-s9q"/>
                             <constraint firstItem="UYi-o4-f5o" firstAttribute="top" secondItem="Ege-7H-SMy" secondAttribute="bottom" id="gwD-m1-TEJ"/>
+                            <constraint firstItem="lki-G1-VPc" firstAttribute="top" secondItem="ab8-0I-PiN" secondAttribute="bottom" id="lK4-zr-bBn"/>
                             <constraint firstItem="Mbb-7c-upa" firstAttribute="width" secondItem="gv0-md-Azw" secondAttribute="width" id="nGW-bN-xaU"/>
+                            <constraint firstItem="lki-G1-VPc" firstAttribute="centerX" secondItem="gv0-md-Azw" secondAttribute="centerX" id="pAP-aS-lSr"/>
                             <constraint firstAttribute="trailing" secondItem="UYi-o4-f5o" secondAttribute="trailing" id="qay-G9-98M"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="mIndcator" destination="lki-G1-VPc" id="0Md-vI-ysg"/>
                         <outlet property="searchBar" destination="ab8-0I-PiN" id="vAq-3Z-QIY"/>
                         <outlet property="tableView" destination="Mbb-7c-upa" id="rLm-Iw-BDI"/>
                     </connections>

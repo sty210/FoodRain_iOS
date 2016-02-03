@@ -19,8 +19,48 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
     var locationManager: CLLocationManager!
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
         print(locations[0].coordinate.longitude)
         print(locations[0].coordinate.latitude)
+        
+        let param = ["longitude": locations[0].coordinate.longitude, "latitude": locations[0].coordinate.latitude]
+        //API호출
+        Alamofire.request(.GET, "http://10.10.0.58:9090/api/regions.json", parameters: param)
+            .responseJSON { response in
+                if let JSON = response.result.value {
+                    if let results = JSON as? NSArray {
+                        for rs in results {
+                            if let dict = rs as? NSDictionary {
+                                let region = SetRegionModel()
+                                region.address = dict["address"] as? String
+                                
+                                if let loc = dict["location"] as? NSDictionary {
+                                    region.longitude = loc["longitude"] as? Float
+                                    region.latitude = loc["latitude"] as? Float
+                                }
+                                
+                                
+                                let preferences = NSUserDefaults.standardUserDefaults()
+                                
+                                preferences.setValue(region.address!, forKey: "myAddress")
+                                preferences.setFloat(region.longitude!, forKey: "myLongitude")
+                                preferences.setFloat(region.latitude!, forKey: "myLatitude")
+                                print("현재 지역을")
+                                print(region.address!)
+                                print(region.longitude!)
+                                print(region.latitude!)
+                                print("로 설정!")
+                                
+                                //  Save to disk
+                                preferences.synchronize()
+                                
+                                self.regionNameLabel.text = region.address
+                            }
+                        }
+                    }
+                }
+        }
+        
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -34,6 +74,9 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tabBarController?.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Normal)
+        self.tabBarController?.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.redColor()], forState: .Selected)
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -63,17 +106,13 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
         */
         
         
-        
-        
         self.HomeCategoryArray.removeAll()
         
-        let inputURL: String! = "http://192.168.0.2:3000/api/categorycodes.json"
-        
         //API호출
-        Alamofire.request(.GET, inputURL, parameters: nil)
+        Alamofire.request(.GET, "http://10.10.0.58:9090/api/categories.json", parameters: nil)
             .responseJSON {
                 response in
-                
+                print("요청 시작!")
                 //API호출 결과
                 if let JSON = response.result.value {
                     if let results = JSON as? NSArray {
@@ -99,8 +138,8 @@ class HomeVC: SunViewController, UICollectionViewDelegate, UICollectionViewDataS
         
         let preferences = NSUserDefaults.standardUserDefaults()
 
-        if preferences.objectForKey("RegionName") != nil {
-            regionNameLabel.text = preferences.objectForKey("RegionName") as? String
+        if preferences.objectForKey("myAddress") != nil {
+            regionNameLabel.text = preferences.objectForKey("myAddress") as? String
         }
     }
     
